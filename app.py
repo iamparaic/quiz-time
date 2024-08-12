@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/images")
 def serve_image(filename):
-    return send_from_directory('my_images', filename)
+    return send_from_directory('images', filename)
 
 if __name__ == '__main__':
     app.run(debug=True)
