@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify, send_from_directory
 
 app = Flask(__name__)
 
-@app.route("/images")
+@app.route("/images/<path:filename>")
 def serve_image(filename):
     return send_from_directory('images', filename)
 
