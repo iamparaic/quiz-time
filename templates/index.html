@@ -14,23 +14,25 @@
         <img src="/images/logo.jpg" alt="Quiz Time site logo">
     </div>
     <h1>Welcome to Quiz Time, Test your knowledge:</h1>
-    <form id="quiz-form">
-        {% for question in questions %}
-            <div class="question-container"> 
-                <fieldset>
-                    <legend>{{ question.question }}</legend>
-                    {% for option in question.options %}
-                        <label>
-                            <input type="radio" name="{{ question.index }}" value="{{ option }}" required>
-                            {{ option }}
-                        </label><br>
-                    {% endfor %}
-                </fieldset>
-            </div>    
-        {% endfor %}
-        <button id="result-button" type="submit">Submit</button>
-    </form>
-    <div id="result"></div>
+    <div class="question-container"> 
+        <form id="quiz-form">
+            {% for question in questions %}    
+                    <fieldset>
+                        <legend>{{ question.question }}</legend>
+                        {% for option in question.options %}
+                            <label>
+                                <input type="radio" name="{{ question.index }}" value="{{ option }}" required>
+                                {{ option }}
+                            </label><br>
+                        {% endfor %}
+                    </fieldset>
+                </div>    
+            {% endfor %}
+            <button id="result-button" type="submit">Submit</button>
+        </form>
+    </div>
+    <div id="result">
     <script src="/static/script.js"></script>
+    </div>
 </body>
 </html>
