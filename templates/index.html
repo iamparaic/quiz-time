@@ -14,10 +14,10 @@
         <img src="/images/logo.jpg" alt="Quiz Time site logo">
     </div>
     <h1>Welcome to Quiz Time, Test your knowledge:</h1>
-    <div class="question-container"> 
+    <div> 
         <form id="quiz-form">
             {% for question in questions %}    
-                    <fieldset>
+                    <fieldset class="small-container">
                         <legend>{{ question.question }}</legend>
                         {% for option in question.options %}
                             <label>
