@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-    <img src="/images/logo.jpg">
-    <img src="url" alt="alternatetext">
+    <div id="logo">
+        <img src="/images/logo.jpg" alt="Quiz Time site logo">
+    </div>
     <h1>Welcome to Quiz Time, Test your knowledge:</h1>
     <form id="quiz-form">
         {% for question in questions %}
-            <div id="question-container"> 
+            <div class="question-container"> 
                 <fieldset>
                     <legend>{{ question.question }}</legend>
                     {% for option in question.options %}
