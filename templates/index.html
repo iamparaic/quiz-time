@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Time</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <img src="/images/logo.jpg">
+    <img src="url" alt="alternatetext">
+    <h1>Welcome to Quiz Time, Test your knowledge:</h1>
+    <form id="quiz-form">
+        {% for question in questions %}
+            <div id="question-container"> 
+                <fieldset>
+                    <legend>{{ question.question }}</legend>
+                    {% for option in question.options %}
+                        <label>
+                            <input type="radio" name="{{ question.index }}" value="{{ option }}" required>
+                            {{ option }}
+                        </label><br>
+                    {% endfor %}
+                </fieldset>
+            </div>    
+        {% endfor %}
+        <button id="result-button" type="submit">Submit</button>
+    </form>
+    <div id="result"></div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
