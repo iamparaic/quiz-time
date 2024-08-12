@@ -11,11 +11,12 @@ h1 {
 
 /********** CONTENT **********/
 body {
+    width: 950px;
+    margin: auto;
     font-family: "Luckiest Guy", cursive;
-    padding: 50px;
 }
 
-.question-container {
+.small-container {
     width: 350px;
     margin: auto;
 }
@@ -36,5 +37,6 @@ label {
 
 #result {
     padding: 20px 0 0 0;
+    width: 350px;
     margin: auto;
 }
