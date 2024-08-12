@@ -25,8 +25,11 @@ fieldset {
     margin-bottom: 20px;
 }
 
-label {
+legend {
     padding: 20px 0 0 0;
+}
+
+label {
     display: block;
 }
 
